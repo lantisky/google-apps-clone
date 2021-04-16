@@ -30,7 +30,18 @@ import {NewsItemComponent} from './components/news-item/news-item.component';
 import {HeadlineExpansionComponent} from './components/headline-expansion/headline-expansion.component';
 import { LogoTextComponent } from './components/logo-text/logo-text.component';
 import { SpotlightItemComponent } from './components/spotlight-item/spotlight-item.component';
+
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+import { MatTabsModule } from "@angular/material/tabs";
+import { CovidComponent } from './pages/covid/covid.component';
+import { MatDividerModule } from "@angular/material/divider";
+import { TopicCardComponent } from './components/topic-card/topic-card.component';
+import { AvatarModule } from "ngx-avatar";
+import { HttpClientModule } from "@angular/common/http";
+import { LocalCardComponent } from "./components/local-card/local-card.component";
+import { TopNewsComponent } from './components/top-news/top-news.component';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +60,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     NewsItemComponent,
     HeadlineExpansionComponent,
     LogoTextComponent,
-    SpotlightItemComponent
+    SpotlightItemComponent,
+    CovidComponent,
+    TopicCardComponent,
+    LocalCardComponent,
+    TopNewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +83,14 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatFormFieldModule,
     MatInputModule,
     MatExpansionModule,
+
     MatSlideToggleModule
+
+    MatTabsModule,
+    MatDividerModule,
+    HttpClientModule,
+    AvatarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
