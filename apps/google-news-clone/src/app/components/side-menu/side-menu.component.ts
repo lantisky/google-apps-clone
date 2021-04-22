@@ -19,7 +19,7 @@ export class SideMenuComponent {
     {name: 'Top Stories', link: 'top-stories', icon: 'public'},
     {name: 'For you', link: 'for-you', icon: 'person_outline'},
     {name: 'Following', link: 'following', icon: 'star_border'},
-    {name: 'Saved searched', link: 'saved-search', icon: 'search'},
+    {name: 'Saved searched', link: '', icon: 'search'},
     {name: 'Covid-19', link: 'covid-19', icon: 'shield'},
     {name: 'New Zealand', link: 'new-zealand', icon: 'flag'},
     {name: 'World', link: 'world', icon: 'public'},
