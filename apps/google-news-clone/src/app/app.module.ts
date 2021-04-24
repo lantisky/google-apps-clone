@@ -12,7 +12,6 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TopStoriesComponent } from './pages/top-stories/top-stories.component';
 import { ForYouComponent } from './pages/for-you/for-you.component';
-import { FollowingComponent } from './pages/following/following.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -35,12 +34,15 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatDividerModule } from "@angular/material/divider";
 import { AvatarModule } from 'ngx-avatar';
 import { HttpClientModule } from "@angular/common/http";
-import { TopicCardComponent } from './components/topic-card/topic-card.component';
 import { CovidComponent } from './pages/covid/covid.component';
 import { LocalCardComponent } from './components/local-card/local-card.component';
 import { TopNewsComponent } from './components/top-news/top-news.component';
 import { NgxTweetModule } from "ngx-tweet";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { NewZealandComponent } from './pages/new-zealand/new-zealand.component';
+import { FollowingModule } from "./pages/following/following.module";
+import { TopicCardModule } from "./components/topic-card/topic-card.module";
+import { LocalCardModule } from "./components/local-card/local-card.module";
 
 @NgModule({
   declarations: [
@@ -49,7 +51,6 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     SideMenuComponent,
     TopStoriesComponent,
     ForYouComponent,
-    FollowingComponent,
     SourceComponent,
     HeadlineComponent,
     HeadlineSimpleComponent,
@@ -61,9 +62,8 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     LogoTextComponent,
     SpotlightItemComponent,
     CovidComponent,
-    TopicCardComponent,
-    LocalCardComponent,
     TopNewsComponent,
+    NewZealandComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,8 +89,14 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     AvatarModule,
     NgxTweetModule,
     MatProgressSpinnerModule,
+    FollowingModule,
+    TopicCardModule,
+    LocalCardModule,
   ],
   providers: [],
+  exports: [
+    LocalCardComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

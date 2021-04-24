@@ -10,7 +10,7 @@ export class LocalCardComponent implements OnInit {
     name: 'city',
     fields: [
       {val: "Auckland "},
-      {val: "Hamilton"}
+      {val: "Hamilton "}
     ]
   };
 

@@ -1,21 +1,30 @@
+<!--<div class="container">-->
+<!--  <mat-tab-group mat-align-tabs="following-tabs bg-scroll">-->
+<!--    &lt;!&ndash;   mat-tab-1 library   &ndash;&gt;-->
+<!--    <mat-tab label="library" routerLink="library">-->
+<!--      <app-library-tab></app-library-tab>-->
+<!--    </mat-tab>-->
+
+<!--    &lt;!&ndash;mat-tab-2-search&ndash;&gt;-->
+<!--    <mat-tab label="searches"  routerLink="searches">-->
+<!--      <app-searches-tab></app-searches-tab>-->
+<!--    </mat-tab>-->
+
+<!--    &lt;!&ndash;mat-tab-3-bookmarks&ndash;&gt;-->
+<!--    <mat-tab label="bookmarks"  routerLink="bookmarks">-->
+<!--      <app-bookmark-tab></app-bookmark-tab>-->
+<!--    </mat-tab>-->
+<!--  </mat-tab-group>-->
+<!--</div>-->
 <div class="container">
-  <nav mat-tab-nav-bar>
-  <mat-tab-group mat-align-tabs="following-tabs bg-scroll" (selectedTabChange)="onTabChanged($event)">
-
-    <!--   mat-tab-1 library   -->
-    <mat-tab label="library">
-      <app-library-tab></app-library-tab>
-    </mat-tab>
-
-    <!--mat-tab-2-search-->
-    <mat-tab label="searches">
-      <app-searches-tab></app-searches-tab>
-    </mat-tab>
-
-    <!--mat-tab-3-bookmarks-->
-    <mat-tab label="bookmarks">
-      <app-bookmark-tab></app-bookmark-tab>
-    </mat-tab>
-  </mat-tab-group>
-  </nav>
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link
+         *ngFor="let link of tabNavLinks"
+         [routerLink]="link.link"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        {{link.label}}
+      </a>
+    </nav>
+    <router-outlet></router-outlet>
 </div>
